@@ -15,6 +15,7 @@ public class AccountIT extends BaseIntegrationTest {
         User user = TestObjectsBuilder.getUser();
         Account account = TestObjectsBuilder.getAccount(user);
 
+        session.persist(user);
         session.persist(account);
         session.flush();
         session.clear();
@@ -25,10 +26,11 @@ public class AccountIT extends BaseIntegrationTest {
 
     @Test
     void read() {
-        User user1 = TestObjectsBuilder.getUser();
-        Account account1 = TestObjectsBuilder.getAccount(user1);
-        Account account2 = TestObjectsBuilder.getAccount(user1);
+        User user = TestObjectsBuilder.getUser();
+        Account account1 = TestObjectsBuilder.getAccount(user);
+        Account account2 = TestObjectsBuilder.getAccount(user);
 
+        session.persist(user);
         session.persist(account1);
         session.persist(account2);
         session.flush();
@@ -44,6 +46,7 @@ public class AccountIT extends BaseIntegrationTest {
         User user = TestObjectsBuilder.getUser();
         Account account = TestObjectsBuilder.getAccount(user);
 
+        session.persist(user);
         session.persist(account);
         session.flush();
         session.clear();
@@ -62,6 +65,7 @@ public class AccountIT extends BaseIntegrationTest {
         User user = TestObjectsBuilder.getUser();
         Account account = TestObjectsBuilder.getAccount(user);
 
+        session.persist(user);
         session.persist(account);
         session.flush();
         session.clear();
