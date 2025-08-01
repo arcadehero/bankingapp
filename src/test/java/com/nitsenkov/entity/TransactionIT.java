@@ -16,7 +16,10 @@ public class TransactionIT extends BaseIntegrationTest {
         Account account2 = TestObjectsBuilder.getAccount(user2);
         Transaction transaction = TestObjectsBuilder.getTransaction(account1, account2);
 
-
+        session.persist(user1);
+        session.persist(user2);
+        session.persist(account1);
+        session.persist(account2);
         session.persist(transaction);
         session.flush();
         session.clear();
@@ -32,6 +35,10 @@ public class TransactionIT extends BaseIntegrationTest {
         Account account2 = TestObjectsBuilder.getAccount(user2);
         Transaction transaction = TestObjectsBuilder.getTransaction(account1, account2);
 
+        session.persist(user1);
+        session.persist(user2);
+        session.persist(account1);
+        session.persist(account2);
         session.persist(transaction);
         session.flush();
         session.clear();
@@ -41,13 +48,17 @@ public class TransactionIT extends BaseIntegrationTest {
     }
 
     @Test
-    void update(){
+    void update() {
         User user1 = TestObjectsBuilder.getUser();
         User user2 = TestObjectsBuilder.getUser();
         Account account1 = TestObjectsBuilder.getAccount(user1);
         Account account2 = TestObjectsBuilder.getAccount(user2);
         Transaction transaction = TestObjectsBuilder.getTransaction(account1, account2);
 
+        session.persist(user1);
+        session.persist(user2);
+        session.persist(account1);
+        session.persist(account2);
         session.persist(transaction);
         session.flush();
         session.clear();
@@ -68,6 +79,10 @@ public class TransactionIT extends BaseIntegrationTest {
         Account account2 = TestObjectsBuilder.getAccount(user2);
         Transaction transaction = TestObjectsBuilder.getTransaction(account1, account2);
 
+        session.persist(user1);
+        session.persist(user2);
+        session.persist(account1);
+        session.persist(account2);
         session.persist(transaction);
         session.flush();
         session.clear();
